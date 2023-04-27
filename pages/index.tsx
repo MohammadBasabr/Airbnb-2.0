@@ -48,17 +48,17 @@ export default function Home({ exploreData, cardsData }: Props) {
           buttonText="Get Inspired"
         />
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }
 
 export async function getStaticProps() {
-  const exploreData = await fetch("http://localhost:4000/cards1").then((res) =>
-    res.json()
-  );
-  const cardsData = await fetch("http://localhost:4000/cards2").then((res) =>
-    res.json()
+  const exploreData: exploreData[] = await fetch(
+    "http://localhost:4000/cards1"
+  ).then((res) => res.json());
+  const cardsData: card[] = await fetch("http://localhost:4000/cards2").then(
+    (res) => res.json()
   );
   return {
     props: {
