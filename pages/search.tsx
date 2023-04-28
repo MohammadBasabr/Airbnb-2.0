@@ -20,7 +20,6 @@ type Props = { searchResults: searchResult[] };
 
 function Search({ searchResults }: Props) {
   const router = useRouter();
-
   const { location, startDate, endDate, noOfGuests } = router.query;
   // console.log(router.query)
   const formattedStartDate = format(new Date(String(startDate)), "dd MMMM yy");
@@ -61,9 +60,9 @@ function Search({ searchResults }: Props) {
 export default Search;
 
 export async function getServerSideProps() {
-  const url = process.env.HOST_URL ;
-  const searchResults: searchResult[] = await fetch(url+"/stays").then((res) =>
-    res.json()
+  const myUrl = process.env.HOST_URL;
+  const searchResults: searchResult[] = await fetch(myUrl + "/stays").then(
+    (res) => res.json()
   );
 
   return {
