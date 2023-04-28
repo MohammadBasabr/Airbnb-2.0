@@ -10,6 +10,7 @@
     "server": "json-server --watch db.json --port 4000"
   },
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.2.2",
     "@heroicons/react": "^2.0.17",
     "@types/node": "18.16.1",
     "@types/react": "18.2.0",

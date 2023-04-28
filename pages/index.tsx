@@ -18,7 +18,7 @@ export default function Home({ exploreData, cardsData }: Props) {
         <title>Airbnb</title>
       </Head>
       {/* header */}
-      <Header />
+      <Header placeholder="" />
       {/* banner */}
       <Banner />
 
