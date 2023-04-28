@@ -37,9 +37,8 @@ function Header({ placeholder }: Props) {
   };
 
   const search = () => {
-    const myUrl = "https://airbnb-2-0-taupe.vercel.app";
     router.push({
-      pathname: myUrl+"/search",
+      pathname: "/search",
       query: {
         location: searchInput,
         startDate: startDate.toISOString(),
