@@ -60,8 +60,7 @@ function Search({ searchResults }: Props) {
 export default Search;
 
 export async function getServerSideProps() {
-  const myUrl = "http://localhost:4000";
-  const searchResults: searchResult[] = await fetch(myUrl + "/stays").then(
+  const searchResults: searchResult[] = await fetch("http://localhost:4000/stays").then(
     (res) => res.json()
   );
 
