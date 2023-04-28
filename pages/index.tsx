@@ -54,11 +54,12 @@ export default function Home({ exploreData, cardsData }: Props) {
 }
 
 export async function getStaticProps() {
-  const exploreData: exploreData[] = await fetch(
-    "http://localhost:4000/cards1"
-  ).then((res) => res.json());
-  const cardsData: card[] = await fetch("http://localhost:4000/cards2").then(
-    (res) => res.json()
+  const url = process.env.HOST_URL;
+  const exploreData: exploreData[] = await fetch(url + "/cards1").then((res) =>
+    res.json()
+  );
+  const cardsData: card[] = await fetch(url + "/cards2").then((res) =>
+    res.json()
   );
   return {
     props: {
