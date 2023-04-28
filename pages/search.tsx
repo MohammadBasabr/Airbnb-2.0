@@ -60,7 +60,7 @@ function Search({ searchResults }: Props) {
 export default Search;
 
 export async function getServerSideProps() {
-  const myUrl = process.env.HOST_URL;
+  const myUrl = "https://airbnb-2-0-taupe.vercel.app";
   const searchResults: searchResult[] = await fetch(myUrl + "/stays").then(
     (res) => res.json()
   );
