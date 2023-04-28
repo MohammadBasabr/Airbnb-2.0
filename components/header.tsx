@@ -37,8 +37,9 @@ function Header({ placeholder }: Props) {
   };
 
   const search = () => {
+    const myUrl = process.env.HOST_URL;
     router.push({
-      pathname: "/search",
+      pathname: myUrl+"/search",
       query: {
         location: searchInput,
         startDate: startDate.toISOString(),
