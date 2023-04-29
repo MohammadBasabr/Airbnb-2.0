@@ -55,10 +55,10 @@ export default function Home({ exploreData, cardsData }: Props) {
 
 export async function getStaticProps() {
   
-  const exploreData: exploreData[] = await fetch("http://localhost:4000/cards1").then(
+  const exploreData: exploreData[] = await fetch("https://airbnb-json.vercel.app/cards1").then(
     (res) => res.json()
   );
-  const cardsData: card[] = await fetch("http://localhost:4000/cards2").then((res) =>
+  const cardsData: card[] = await fetch("https://airbnb-json.vercel.app/cards2").then((res) =>
     res.json()
   );
   return {
